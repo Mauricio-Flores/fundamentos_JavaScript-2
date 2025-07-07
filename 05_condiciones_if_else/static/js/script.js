@@ -85,7 +85,7 @@ function compararNumeros() {
  Pide una nota entre 1 y 7. Si es 4 o más, 
  muestra “Aprobado”, si es menor, muestra “Reprobado”.*/
 
- function calificacionEscolar() {
+function calificacionEscolar() {
     let calificacion = parseInt(prompt("Ingrese su nota:  "));
 
     if (calificacion < 4) {
@@ -95,15 +95,15 @@ function compararNumeros() {
     } else {
         alert("Ingresar valor")
     }
- };
+};
 
- /*Nombre de usuario válido
- Pide un nombre de usuario. Si el valor ingresado es
-  "admin", muestra “Bienvenido, administrador”. Si no, muestra “Usuario no reconocido”.*/
+/*Nombre de usuario válido
+Pide un nombre de usuario. Si el valor ingresado es
+ "admin", muestra “Bienvenido, administrador”. Si no, muestra “Usuario no reconocido”.*/
 
-  function comprobarUsuario() {
+function comprobarUsuario() {
     let usuario = prompt("Ingrese su usuario: ");
-    if (usuario == "admin"){
+    if (usuario == "admin") {
         alert("Bienvenido, administrador..")
     } else if (usuario !== "admin") {
         alert("usuario no reconocido")
@@ -111,8 +111,59 @@ function compararNumeros() {
         alert("Ingrese usuario")
     }
 
-  }
+}
 
+// Verificar si una palabra empieza con "A"
+//Pide una palabra al usuario. Verifica si empieza con la letra “A” mayúscula y muestra un mensaje acorde.
+
+function letraMayuscula() {
+    // Input string
+    let texto = prompt("Ingresa una palabra: ");
+    // Condición IF - ELSE IF - ELSE
+    if (texto[0] == "A") {
+        alert("La palabra empieza con la letra A");
+    } else {
+        alert("La palabra no empieza con la letra A mayúscula");
+    };
+};
+
+/* Precio con descuento
+ Solicita el precio de un producto. 
+ Si el precio es mayor a 10000, muestra que aplica descuento. 
+ Si no, indica precio normal. */
+
+function descuentoPrecio() {
+    // Input conversión string a número
+    let precio = parseInt(prompt("Ingresa el precio total: "));
+    // Condición IF - ELSE IF - ELSE
+    if (precio > 10000) {
+        alert("Se aplicará el descuento");
+    } else if (precio <= 10000 && precio > 0) {
+        alert("No se aplicará descuento");
+    } else {
+        alert("Ingrese un precio válido");
+    };
+};
+
+/* Verificar si una persona puede conducir
+ Solicita la edad del usuario y si tiene licencia (por ejemplo, respondiendo "sí" o "no").
+ Si tiene 18 o más y respondió que tiene licencia, muestra “Puede conducir”. 
+ Si no, muestra “No puede conducir”. */
+
+function licenciaEdad() {
+    // Input conversión string a número
+    let edad = parseInt(prompt("Ingrese su edad: "));
+    // Input string
+    let licencia = prompt('¿Tienes licencia de conducir? (Ingresa "si" o "no" sin mayúsculas ni espacios)');
+    // Condición IF - ELSE IF - ELSE
+    if (edad >= 18 && licencia == "si") {
+        alert("Usted puede conducir.");
+    } else if (edad < 18 && edad > 0 && licencia == "no") {
+        alert("Usted no puede conducir.");
+    } else {
+        alert("Ingrese valores válidos.");
+    };
+};
 
 
 
