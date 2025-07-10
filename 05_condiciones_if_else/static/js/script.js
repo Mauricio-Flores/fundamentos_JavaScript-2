@@ -134,7 +134,7 @@ function letraMayuscula() {
 
 function descuentoPrecio() {
     // Input conversión string a número
-    let precio = parseInt(prompt("Ingresa el precio total: "));
+    let precio = parseFloat(prompt("Ingresa el precio total: "));
     // Condición IF - ELSE IF - ELSE
     if (precio > 10000) {
         alert("Se aplicará el descuento");
@@ -165,8 +165,14 @@ function licenciaEdad() {
     };
 };
 
+/*11.- Comparar la longitud de dos palabras
+Solicita dos palabras con prompt(). Compara cuántas letras tiene cada una y muestra cuál es más larga o si tienen el mismo largo.*/
 
+function compararLongitud() {
+    let Longitud = prompt ('Ingresa dos letras')
 
+    if(kfhsd)
+}
 
 
 
