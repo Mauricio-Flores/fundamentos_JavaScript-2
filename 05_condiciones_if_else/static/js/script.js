@@ -101,7 +101,7 @@ function calificacionEscolar() {
 Pide un nombre de usuario. Si el valor ingresado es
  "admin", muestra “Bienvenido, administrador”. Si no, muestra “Usuario no reconocido”.*/
 
-function comprobarUsuario() {
+function validarUsuario() {
     let usuario = prompt("Ingrese su usuario: ");
     if (usuario == "admin") {
         alert("Bienvenido, administrador..")
@@ -156,7 +156,7 @@ function licenciaEdad() {
     // Input string
     let licencia = prompt('¿Tienes licencia de conducir? (Ingresa "si" o "no" sin mayúsculas ni espacios)');
     // Condición IF - ELSE IF - ELSE
-    if (edad >= 18 && licencia == "si") {
+    if (edad >= 18 && edad < 100) {
         alert("Usted puede conducir.");
     } else if (edad < 18 && edad > 0 && licencia == "no") {
         alert("Usted no puede conducir.");
@@ -165,18 +165,105 @@ function licenciaEdad() {
     };
 };
 
-/*11.- Comparar la longitud de dos palabras
-Solicita dos palabras con prompt(). Compara cuántas letras tiene cada una y muestra cuál es más larga o si tienen el mismo largo.*/
+function validarNumero() {
+    let numero = parseInt(prompt("Ingrese su numero"))
+    if (numero > 0) {
+        alert(`Su numero es positivo`)
+    } else if (numero < 0){
+        alert(`Su numero es negativo`) }
+    else if (numero === 0){
+        alert(`Su numero es 0`)
+        }
+    else {
+        alert("Ingrese un valor valido.")
+    }
 
-function compararLongitud() {
-    let Longitud = prompt ('Ingresa dos letras')
+}   
 
-    if(kfhsd)
+/* 11. - Comparar la longitud de dos palabras
+Solicita dos palabras con prompt().Compara cuántas letras tiene cada
+ una y muestra cuál es más larga o si tienen el mismo largo. */
+
+function palabraLarga() {
+    let pal1 = prompt("Ingrese primera palabra:")
+    let pal2 = prompt("Ingrese segunda palabra:")
+
+    if (pal1 == "" && pal2 == "") {
+        alert("Ingrese algún valor para trabajar...")
+    } else if (pal1.length < pal2.length) {
+        alert(`La palabra más larga es ${pal2} con ${pal2.length} carácteres`)
+    } else if (pal1.length == pal2.length) {
+        alert(`Las palabras ${pal2} y ${pal1} tienen mismo largo con:\n
+        ${pal1.length} carácteres`)
+    } else {
+        alert(`La palabra más larga es ${pal1} con ${pal1.length} carácteres`)
+    }
 }
 
 
+/* 12. - Validar correo electrónico
+Pide al usuario que ingrese un correo.Verifica si
+ el texto contiene el símbolo @.Si lo tiene, muestra "Correo válido", si no, "Correo inválido". */
+
+function validarCorreo() {
+    let email = prompt("Ingrese su correo electrónico:");
+
+    if (email.includes("@")) {
+        alert(`El correo ${email} es válido`);
+    } else {
+        alert(`El correo ${email} es inválido`);
+    }
+}
 
 
+/* 13. - Verificar si un número es positivo o negativo
+Solicita un número.Muestra si es positivo, negativo o cero. */
+
+function verificarNumero() {
+    let num = parseInt(prompt("Ingrese un número:"));
+
+    if (num > 0) {
+        alert("El número es positivo");
+    } else if (num < 0) {
+        alert("El número es negativo");
+    } else if (num == 0) {
+        alert("El número es cero");
+    } else {
+        alert("Ingrese un número");
+    }
+}
+
+/* 14.- Saludo personalizado según hora
+Pide la hora actual (en formato 24 horas). Si es antes de las 12, muestra
+ "Buenos días", si es entre 12 y 18, "Buenas tardes", y si es mayor a 18, "Buenas noches".*/
+
+function mostrarHora() {
+    let hora = parseInt(prompt("Ingrese una hora:"));
+
+    if (hora < 12) {
+        alert("Buenos días");
+    } else if (hora >= 12 && hora <= 18) {
+        alert("Buenas tardes");
+    } else {
+        alert("Buenas noches")
+    }
+}
+
+/* 15.- Verificar si una palabra contiene la letra "e"
+Solicita una palabra. Verifica si contiene la letra "e" (minúscula). Si la tiene, muestra
+ "Contiene la letra 'e'", si no, muestra "No contiene la letra 'e'". */
+
+function mostrarLetra() {
+    let palabra = prompt("Ingrese una palabra:");
+
+    if (palabra == "e") {
+        alert("Contiene la letra e");
+    } else if (palabra !== "e") {
+        alert("No contiene la letra e");
+    } else {
+        alert("Ingresar un valor válido")
+    }
+}
 
 
 
