@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+header {
+    background-color: transparent;
+    color: aliceblue;
+    text-align: center;
+    box-shadow: 5px 5px 20px #005;
+    padding: 20px;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #030303;
+    margin-top: 100px;
+    box-shadow: 5px 5px 20px #005;
+    margin-bottom: 100px;
+}
+
+button {
+    background-color: transparent;
+    color: aliceblue;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    border-left: 17px solid #001;
+    box-shadow: 1px 1px 1px #002;
+}
+
+button:hover {
+    cursor: pointer;
+}
