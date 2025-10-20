@@ -103,6 +103,6 @@ function palabraClave() {
     if (frase.toLowerCase().includes('jesus')) {
         alert("Tu palabra tiene la pabra clave")
     } else {
-        alert("Tu palabra no tiene la palabra clave")
+        alert("Tu frase no tiene la palabra clave")
     }
 }
